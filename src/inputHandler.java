@@ -81,15 +81,16 @@ public class inputHandler {
         char[] recieChars = receivedWord.toCharArray();
         System.out.println("___________________________\n");
 
-        for (int i = 0; i < baodleArr.length; i++) {
-            for (int j = 0; j < recieChars.length; j++) {
-
-                if(i == j && baodleArr[i] == recieChars[j]) { //Correct location
-                    System.out.print(GREEN_BACKGROUND + baodleArr[i] + ANSI_RESET);
-                } else if (baodleArr[i] == recieChars[j]) { // Correct letter
-                    System.out.print(YELLOW_BACKGROUND + baodleArr[i] +ANSI_RESET);
-                } else if (i == j) {
-                    System.out.print("_");
+        for (int i = 0; i < recieChars.length; i++) {
+            for (int j = 0; j < baodleArr.length; j++) {
+                if(i == j && recieChars[i] == baodleArr[j]) { //Correct location
+                    System.out.print(GREEN_BACKGROUND + recieChars[i] + ANSI_RESET);
+                    break;
+                } else if (recieChars[i] == baodleArr[j]) { // Correct letter
+                    System.out.print(YELLOW_BACKGROUND + recieChars[i] +ANSI_RESET);
+                    break;
+                } else if (j == 4){
+                    System.out.print(recieChars[i]);
                 }
             }
         }
