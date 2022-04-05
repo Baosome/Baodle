@@ -1,16 +1,38 @@
 import java.util.*;
 
+/**
+ * Input class
+ * Handle user inputs
+ */
 public class inputHandler {
+    /**
+     * The picked word.
+     */
     String myBaodle;
+
+    /**
+     * Total tries to guess the word
+     */
     int myTotalTries = 5;
+
+    /**
+     * If game is complete logic boolean
+     */
     boolean myCompleted = false;
 
+    /**
+     * Const for change word background in System Print
+     * No future usage after Display class finish.
+     */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String GREEN_BACKGROUND = "\u001B[42m";
     public static final String YELLOW_BACKGROUND = "\u001B[43m";
 
-
-
+    /**
+     * Constructors
+     * Run game logic functions when called.
+     * Require the wordle word
+     */
     public inputHandler(String theBaodle) {
         this.myBaodle = theBaodle;
         System.out.println("Welcome to Baodle!");
@@ -18,6 +40,10 @@ public class inputHandler {
         enterInput();
     }
 
+    /**
+     * Function for receiving inputs and counts the
+     *  number of tries.
+     */
     private void enterInput(){
         while(myTotalTries >= 0 && !myCompleted) {
             Scanner scan = new Scanner(System.in);
@@ -29,19 +55,30 @@ public class inputHandler {
         }
     }
 
-    private void checkWord(String recievedWord){
-        if(recievedWord.toLowerCase().equals(myBaodle)) {
+    /**
+     * Function for checking the received words
+     *  End the game if words is correct else checks it.
+     * @param receivedWord Require the received word, user input
+     */
+    private void checkWord(String receivedWord){
+        if(receivedWord.toLowerCase().equals(myBaodle)) { // if correct word
             System.out.println("Good job! You got the word correct");
             System.out.println("You got it in " + (6 - myTotalTries) + " tries");
             myCompleted = true;
-        } else {
-            hasLettersOrLocations(recievedWord);
+        } else { // else run game logic
+            hasLettersOrLocations(receivedWord);
         }
     }
 
-    private void hasLettersOrLocations(String recievedWord){
+    /**
+     * Function for checking the received words
+     *  Check for letter locations and has
+     *  and prints if true.
+     * @param receivedWord Require the received word, user input
+     */
+    private void hasLettersOrLocations(String receivedWord){
         char[] baodleArr = myBaodle.toCharArray();
-        char[] recieChars = recievedWord.toCharArray();
+        char[] recieChars = receivedWord.toCharArray();
         System.out.println("___________________________\n");
 
         for (int i = 0; i < baodleArr.length; i++) {
