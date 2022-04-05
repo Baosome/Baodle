@@ -6,7 +6,9 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * Main called
+ */
 public class BaodleMain {
     public static void main(String[] theArgs) throws Exception {
         //createWorldeFile();
@@ -18,6 +20,10 @@ public class BaodleMain {
 
     }
 
+    /**
+     * Use large (size) words file and sorted them by word length and
+     * then copy them into wordle file for usage.
+     */
     public static void createWorldeFile(){
         try {
             File wordsText = new File("Words");
@@ -29,8 +35,8 @@ public class BaodleMain {
                 sortedList.add(scan.nextLine());
             }
 
-            Comparator<String> comp = (s1, s2) -> Integer.compare (s1.length(), s2.length());
-            Collections.sort(sortedList, comp);
+            Comparator<String> comp = Comparator.comparingInt(String::length);
+            sortedList.sort(comp);
 
             for(String s : sortedList){
                 if (s.length() == 5) {
@@ -45,8 +51,6 @@ public class BaodleMain {
 
             writer.close();
             scan.close();
-        } catch(FileNotFoundException e) {
-            e.printStackTrace();
         } catch(IOException e) {
             e.printStackTrace();
         }
