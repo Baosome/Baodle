@@ -8,6 +8,7 @@ public class inputHandler {
 
     public inputHandler(String theBaodle) {
         this.myBaodle = theBaodle;
+        System.out.println("Welcome to Baodle!");
         enterInput();
     }
 
@@ -16,6 +17,10 @@ public class inputHandler {
             System.out.println("Enter a 5 letters word: ");
             Scanner scan = new Scanner(System.in);
             checkWord(scan.nextLine());
+            myTotalTries--;
+        }
+        if(myTotalTries == 0) {
+            System.out.println("You have used up all 6 tries.");
         }
     }
 
