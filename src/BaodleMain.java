@@ -14,7 +14,6 @@ public class BaodleMain {
         String myBaodleWord = baodle.getMyBaodle();
 
         System.out.println("The Baodle word is " + myBaodleWord);
-
         inputHandler myInput = new inputHandler(myBaodleWord);
 
     }

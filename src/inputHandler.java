@@ -48,11 +48,11 @@ public class inputHandler {
             for (int j = 0; j < recieChars.length; j++) {
 
                 if(i == j && baodleArr[i] == recieChars[j]) { //Correct location
-                    System.out.print(GREEN_BACKGROUND + baodleArr[i] + ANSI_RESET + " ");
+                    System.out.print(GREEN_BACKGROUND + baodleArr[i] + ANSI_RESET);
                 } else if (baodleArr[i] == recieChars[j]) { // Correct letter
-                    System.out.print(YELLOW_BACKGROUND + baodleArr[i] +ANSI_RESET  + " ");
+                    System.out.print(YELLOW_BACKGROUND + baodleArr[i] +ANSI_RESET);
                 } else if (i == j) {
-                    System.out.print(" _ ");
+                    System.out.print("_");
                 }
             }
         }
