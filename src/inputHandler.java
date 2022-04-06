@@ -47,8 +47,13 @@ public class inputHandler {
     private void enterInput(){
         while(myTotalTries >= 0 && !myCompleted) {
             Scanner scan = new Scanner(System.in);
-            checkWord(scan.nextLine().toLowerCase().substring(0,5));
-            myTotalTries--;
+            String fiveLetter = scan.nextLine();
+            if (fiveLetter.length() == 5) {
+                checkWord(fiveLetter.toLowerCase());
+                myTotalTries--;
+            } else {
+                System.out.println("Please enter a word with 5 letters");
+            }
         }
         if(myTotalTries == 0) {
             System.out.println("You have used up all 6 tries.");
@@ -67,6 +72,7 @@ public class inputHandler {
             myCompleted = true;
         } else { // else run game logic
             hasLettersOrLocations(receivedWord);
+            System.out.println("You have " + myTotalTries + " total tries left!");
         }
     }
 
