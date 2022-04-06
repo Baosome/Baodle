@@ -47,7 +47,7 @@ public class inputHandler {
     private void enterInput(){
         while(myTotalTries >= 0 && !myCompleted) {
             Scanner scan = new Scanner(System.in);
-            checkWord(scan.nextLine().toLowerCase());
+            checkWord(scan.nextLine().toLowerCase().substring(0,5));
             myTotalTries--;
         }
         if(myTotalTries == 0) {
