@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
@@ -21,6 +23,11 @@ public class inputHandler {
     boolean myCompleted = false;
 
     /**
+     * The list of words file, WordleWords
+     */
+    private File myBaodleTextFile = new File("WordleWords");
+
+    /**
      * Const for change word background in System Print
      * No future usage after Display class finish.
      */
@@ -33,7 +40,7 @@ public class inputHandler {
      * Run game logic functions when called.
      * Require the wordle word
      */
-    public inputHandler(String theBaodle) {
+    public inputHandler(String theBaodle) throws FileNotFoundException {
         this.myBaodle = theBaodle;
         System.out.println("Welcome to Baodle!");
         System.out.println("Enter a 5 letters word: ");
@@ -44,15 +51,15 @@ public class inputHandler {
      * Function for receiving inputs and counts the
      *  number of tries.
      */
-    private void enterInput(){
+    private void enterInput() throws FileNotFoundException {
         while(myTotalTries >= 0 && !myCompleted) {
             Scanner scan = new Scanner(System.in);
             String fiveLetter = scan.nextLine();
-            if (fiveLetter.length() == 5) {
+            if (fiveLetter.length() == 5 && realWord(fiveLetter.toLowerCase())) {
                 checkWord(fiveLetter.toLowerCase());
                 myTotalTries--;
             } else {
-                System.out.println("Please enter a word with 5 letters");
+                System.out.println("Please enter a real word with 5 letters");
             }
         }
         if(myTotalTries == 0) {
@@ -101,6 +108,16 @@ public class inputHandler {
             }
         }
         System.out.println("\n");
+    }
+
+    private boolean realWord(String receviedWords) throws FileNotFoundException {
+        Scanner scan = new Scanner(myBaodleTextFile);
+        while (scan.hasNext()) {
+            if (scan.nextLine().equals(receviedWords)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
