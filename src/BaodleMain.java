@@ -1,7 +1,9 @@
+import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -10,12 +12,19 @@ import java.util.regex.Pattern;
  */
 public class BaodleMain {
     public static void main(String[] theArgs) throws Exception {
-        //createWorldeFile();
-        BaodlePicker baodle = new BaodlePicker();
-        String myBaodleWord = baodle.getMyBaodle();
+    //    createWorldeFile();
+//        BaodlePicker baodle = new BaodlePicker();
+//        String myBaodleWord = baodle.getMyBaodle();
+//
+//        System.out.println("The Baodle word is " + myBaodleWord);
+//        inputHandler myInput = new inputHandler(myBaodleWord);
 
-        System.out.println("The Baodle word is " + myBaodleWord);
-        inputHandler myInput = new inputHandler(myBaodleWord);
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new Display().setVisible(true);
+            }
+        });
 
     }
 
