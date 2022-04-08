@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
@@ -42,28 +44,27 @@ public class inputHandler {
      */
     public inputHandler(String theBaodle) throws FileNotFoundException {
         this.myBaodle = theBaodle;
-        System.out.println("Welcome to Baodle!");
-        System.out.println("Enter a 5 letters word: ");
-        enterInput();
     }
 
     /**
      * Function for receiving inputs and counts the
      *  number of tries.
      */
-    private void enterInput() throws FileNotFoundException {
-        while(myTotalTries >= 0 && !myCompleted) {
-            Scanner scan = new Scanner(System.in);
-            String fiveLetter = scan.nextLine();
-            if (fiveLetter.length() == 5 && realWord(fiveLetter.toLowerCase())) {
-                checkWord(fiveLetter.toLowerCase());
+    public void enterInput(String input) throws FileNotFoundException {
+        if(myTotalTries >= 0 && !myCompleted) {
+            if (input.length() == 5 && realWord(input.toLowerCase())) {
+                checkWord(input.toLowerCase());
                 myTotalTries--;
             } else {
                 System.out.println("Please enter a real word with 5 letters");
+                JFrame f = new JFrame();
+                JOptionPane.showMessageDialog(f, "Please enter a real word with 5 letters", "Error", JOptionPane.WARNING_MESSAGE);
             }
         }
-        if(myTotalTries == 0) {
+        if(myTotalTries < 0) {
             System.out.println("You have used up all 6 tries.");
+            JFrame f = new JFrame();
+            JOptionPane.showMessageDialog(f, "You have used up all 6 tries.", "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 

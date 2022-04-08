@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,21 +10,16 @@ import java.util.regex.Pattern;
  * Main called
  */
 public class BaodleMain {
-    public static void main(String[] theArgs) throws Exception {
-    //    createWorldeFile();
-//        BaodlePicker baodle = new BaodlePicker();
-//        String myBaodleWord = baodle.getMyBaodle();
-//
-//        System.out.println("The Baodle word is " + myBaodleWord);
-//        inputHandler myInput = new inputHandler(myBaodleWord);
+    public static void main(String[] theArgs) {
+//        createWorldeFile();
 
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
                 new Display().setVisible(true);
+            } catch(Exception e) {
+                e.printStackTrace();
             }
         });
-
     }
 
     /**
