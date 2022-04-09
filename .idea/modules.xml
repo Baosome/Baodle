@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Baodle.iml" filepath="$PROJECT_DIR$/Baodle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Baodle.iml" filepath="$PROJECT_DIR$/.idea/Baodle.iml" />
     </modules>
   </component>
 </project>
