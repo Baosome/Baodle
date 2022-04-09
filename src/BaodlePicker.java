@@ -9,7 +9,7 @@ public class BaodlePicker {
     /**
      * The list of words file, WordleWords
      */
-    private File myBaodleTextFile = new File("WordleWords");
+    private final File myBaodleTextFile = new File("WordleWords");
 
     /**
      * The picked word
