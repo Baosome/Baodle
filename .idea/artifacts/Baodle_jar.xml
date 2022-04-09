@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Baodle:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Baodle_jar</output-path>
+    <root id="archive" name="Baodle.jar">
+      <element id="module-output" name="Baodle" />
+    </root>
+  </artifact>
+</component>
