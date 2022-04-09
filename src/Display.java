@@ -68,6 +68,15 @@ public class Display extends JFrame{
     private JLabel W6L4;
     private JLabel W6L5;
 
+    private JLabel[] W1;
+    private JLabel[] W2;
+    private JLabel[] W3;
+    private JLabel[] W4;
+    private JLabel[] W5;
+    private JLabel[] W6;
+
+    JLabel[][] LetterDisplayLabels;
+
     public Display() throws Exception {
         initComponents();
     }
@@ -83,7 +92,7 @@ public class Display extends JFrame{
         W1L4 = new JLabel();
         W1L5 = new JLabel();
 
-        JLabel[] W1 = {W1L1, W1L2, W1L3, W1L4,W1L5};
+        W1 = new JLabel[]{W1L1, W1L2, W1L3, W1L4, W1L5};
 
         W2L1 = new JLabel();
         W2L2 = new JLabel();
@@ -91,7 +100,7 @@ public class Display extends JFrame{
         W2L4 = new JLabel();
         W2L5 = new JLabel();
 
-        JLabel[] W2 = {W2L1, W2L2, W2L3, W2L4,W2L5};
+        W2 = new JLabel[]{W2L1, W2L2, W2L3, W2L4, W2L5};
 
         W3L1 = new JLabel();
         W3L2 = new JLabel();
@@ -99,7 +108,7 @@ public class Display extends JFrame{
         W3L4 = new JLabel();
         W3L5 = new JLabel();
 
-        JLabel[] W3 = {W3L1, W3L2, W3L3, W3L4,W3L5};
+        W3 = new JLabel[]{W3L1, W3L2, W3L3, W3L4, W3L5};
 
         W4L1 = new JLabel();
         W4L2 = new JLabel();
@@ -107,7 +116,7 @@ public class Display extends JFrame{
         W4L4 = new JLabel();
         W4L5 = new JLabel();
 
-        JLabel[] W4 = {W4L1, W4L2, W4L3, W4L4,W4L5};
+        W4 = new JLabel[]{W4L1, W4L2, W4L3, W4L4, W4L5};
 
         W5L1 = new JLabel();
         W5L2 = new JLabel();
@@ -115,7 +124,7 @@ public class Display extends JFrame{
         W5L4 = new JLabel();
         W5L5 = new JLabel();
 
-        JLabel[] W5 = {W5L1, W5L2, W5L3, W5L4,W5L5};
+        W5 = new JLabel[]{W5L1, W5L2, W5L3, W5L4, W5L5};
 
         W6L1 = new JLabel();
         W6L2 = new JLabel();
@@ -123,9 +132,9 @@ public class Display extends JFrame{
         W6L4 = new JLabel();
         W6L5 = new JLabel();
 
-        JLabel[] W6 = {W6L1, W6L2, W6L3, W6L4,W6L5};
+        W6 = new JLabel[]{W6L1, W6L2, W6L3, W6L4, W6L5};
 
-        JLabel[][] LetterDisplayLabels = {W1,W2,W3,W4,W5,W6};
+        LetterDisplayLabels = new JLabel[][]{W1, W2, W3, W4, W5, W6};
 
         for(JLabel[] a : LetterDisplayLabels) {
             for (JLabel b: a) {
@@ -445,7 +454,7 @@ public class Display extends JFrame{
 
         Input.addActionListener(evt -> {
             try {
-                InputActionPerformed(evt, myInput);
+                InputActionPerformed(evt, myInput, LetterDisplayLabels);
             } catch(FileNotFoundException e) {
                 e.printStackTrace();
             }
@@ -454,8 +463,8 @@ public class Display extends JFrame{
         pack();
     }
 
-    private void InputActionPerformed(ActionEvent evt, inputHandler theInput) throws FileNotFoundException {
-        theInput.enterInput(Input.getText());
+    private void InputActionPerformed(ActionEvent evt, inputHandler theInput, JLabel[][] myDisplay) throws FileNotFoundException {
+        theInput.enterInput(Input.getText(), myDisplay[5-theInput.myTotalTries]);
 
     }
 

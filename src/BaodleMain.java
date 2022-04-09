@@ -13,7 +13,6 @@ import java.util.regex.Pattern;
 public class BaodleMain {
     public static void main(String[] theArgs) {
 //        createWorldeFile();
-        System.out.println("Test");
         java.awt.EventQueue.invokeLater(() -> {
             try {
                 new Display().setVisible(true);

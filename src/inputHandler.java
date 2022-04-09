@@ -50,10 +50,10 @@ public class inputHandler {
      * Function for receiving inputs and counts the
      *  number of tries.
      */
-    public void enterInput(String input) throws FileNotFoundException {
+    public void enterInput(String input, JLabel[] myDisplay) throws FileNotFoundException {
         if(myTotalTries >= 0 && !myCompleted) {
             if (input.length() == 5 && realWord(input.toLowerCase())) {
-                checkWord(input.toLowerCase());
+                checkWord(input.toLowerCase(), myDisplay);
                 myTotalTries--;
             } else {
                 System.out.println("Please enter a real word with 5 letters");
@@ -73,13 +73,21 @@ public class inputHandler {
      *  End the game if words is correct else checks it.
      * @param receivedWord Require the received word, user input
      */
-    private void checkWord(String receivedWord){
+    private void checkWord(String receivedWord, JLabel[] theDisplay){
         if(receivedWord.toLowerCase().equals(myBaodle)) { // if correct word
+            int count = 0;
+            for(char c: receivedWord.toCharArray()) {
+                displayOnLetterDisplay(theDisplay[count], "Green", Character.toString(c));
+                count++;
+            }
+            JFrame f = new JFrame();
+            JOptionPane.showMessageDialog(f, "GOOD JOB! You answered correctly", "YAY!", JOptionPane.INFORMATION_MESSAGE);
+
             System.out.println("Good job! You got the word correct");
             System.out.println("You got it in " + (6 - myTotalTries) + " tries");
             myCompleted = true;
         } else { // else run game logic
-//            hasLettersOrLocations(receivedWord);
+            hasLettersOrLocations(receivedWord, theDisplay);
             System.out.println("You have " + myTotalTries + " total tries left!");
         }
     }
@@ -90,7 +98,7 @@ public class inputHandler {
      *  and prints if true.
      * @param receivedWord Require the received word, user input
      */
-    private void hasLettersOrLocations(String receivedWord, JPanel[] myDisplay){
+    private void hasLettersOrLocations(String receivedWord, JLabel[] theDisplay){
         char[] baodleArr = myBaodle.toCharArray();
         char[] recieChars = receivedWord.toCharArray();
         System.out.println("___________________________\n");
@@ -99,28 +107,38 @@ public class inputHandler {
             for (int j = 0; j < baodleArr.length; j++) {
                 if(i == j && recieChars[i] == baodleArr[j]) { //Correct location
                     System.out.print(GREEN_BACKGROUND + recieChars[i] + ANSI_RESET);
-//                    displayOnLetterDisplay();
+                    displayOnLetterDisplay(theDisplay[i], "Green", receivedWord.substring(i,i+1));
                     break;
                 } else if (recieChars[i] == baodleArr[j]) { // Correct letter
                     System.out.print(YELLOW_BACKGROUND + recieChars[i] +ANSI_RESET);
-//                    displayOnLetterDisplay();
+                    displayOnLetterDisplay(theDisplay[i], "Yellow", receivedWord.substring(i,i+1));
                     break;
                 } else if (j == 4){
                     System.out.print(recieChars[i]);
+                    displayOnLetterDisplay(theDisplay[i], "", receivedWord.substring(i,i+1));
                 }
             }
         }
         System.out.println("\n");
     }
 
-    private void displayOnLetterDisplay(JPanel[] myDisplay){
-
+    private void displayOnLetterDisplay(JLabel theDisplay, String theColor, String theLetter){
+        if (theColor == "Green") {
+            theDisplay.setBackground(new Color(3, 255, 33));
+            theDisplay.setText(theLetter);
+        } else if (theColor == "Yellow") {
+            theDisplay.setBackground(new Color(241, 210, 8));
+            theDisplay.setText(theLetter);
+        } else {
+            theDisplay.setBackground(new Color(76, 76, 76));
+            theDisplay.setText(theLetter);
+        }
     }
 
-    private boolean realWord(String receviedWords) throws FileNotFoundException {
+    private boolean realWord(String receivedWords) throws FileNotFoundException {
         Scanner scan = new Scanner(myBaodleTextFile);
         while (scan.hasNext()) {
-            if (scan.nextLine().equals(receviedWords)) {
+            if (scan.nextLine().equals(receivedWords)) {
                 return true;
             }
         }
