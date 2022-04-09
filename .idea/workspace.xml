@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08beac83-aef2-45cf-913a-3836a2e48d68" name="Default Changelist" comment="13th,&#10;Added UI function, inputUI works and error appears now. Alphabet panel at the bottom," />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="27Iz8OWC58H2SkENYd5swk7sK6U" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LeetCode" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bao\IdeaProjects\Baodle" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="BaodleMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BaodleMain" />
+      <module name="Baodle" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BaodleMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08beac83-aef2-45cf-913a-3836a2e48d68" name="Default Changelist" comment="" />
+      <created>1649022228301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1649022228301</updated>
+      <workItem from="1649022229464" duration="1075000" />
+      <workItem from="1649023621384" duration="139000" />
+      <workItem from="1649023928984" duration="3543000" />
+      <workItem from="1649137334184" duration="5575000" />
+      <workItem from="1649215361441" duration="5000" />
+      <workItem from="1649215417516" duration="209000" />
+      <workItem from="1649215658560" duration="358000" />
+      <workItem from="1649216187600" duration="139000" />
+      <workItem from="1649223022795" duration="57000" />
+      <workItem from="1649273360052" duration="4692000" />
+      <workItem from="1649312968276" duration="2784000" />
+      <workItem from="1649393207055" duration="3775000" />
+      <workItem from="1649548465256" duration="63000" />
+    </task>
+    <task id="LOCAL-00001" summary="First commit. Current have words file, and word picker">
+      <created>1649137918914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1649137918914</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Enter input now works (Checks for correct word).&#10;inputHandler runs in main">
+      <created>1649138619872</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1649138619872</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Third commit. Count tries, welcome title">
+      <created>1649138886742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649138886742</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Forth commit, all logic compete and work on system print">
+      <created>1649140325142</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649140325142</updated>
+    </task>
+    <task id="LOCAL-00005" summary="5th,&#10;System print clean up.&#10;Turns out there is still other features to add&#10;TODO: &#10;1. Max 5 words input&#10;2. Input is a real word">
+      <created>1649140477050</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649140477050</updated>
+    </task>
+    <task id="LOCAL-00006" summary="6th,&#10;Java docs for all completed classes.">
+      <created>1649141095084</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649141095084</updated>
+    </task>
+    <task id="LOCAL-00007" summary="6th,&#10;Java docs for all completed classes.">
+      <created>1649141112035</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1649141112035</updated>
+    </task>
+    <task id="LOCAL-00008" summary="7th,&#10;There was error in logic,&#10;all fix now">
+      <created>1649142405417</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1649142405417</updated>
+    </task>
+    <task id="LOCAL-00009" summary="8th,&#10;Words can only be 5 words now">
+      <created>1649273865727</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1649273865727</updated>
+    </task>
+    <task id="LOCAL-00010" summary="9th,&#10;Words can only be 5 words now (Fix again)">
+      <created>1649275049418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1649275049418</updated>
+    </task>
+    <task id="LOCAL-00011" summary="10th,&#10;Recieved word can only be a real word now">
+      <created>1649278731298</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1649278731298</updated>
+    </task>
+    <task id="LOCAL-00012" summary="11th,&#10;Added Ui, UI need a lot of clean up soon">
+      <created>1649314921129</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1649314921129</updated>
+    </task>
+    <task id="LOCAL-00013" summary="11th,&#10;Added Ui, UI need a lot of clean up soon">
+      <created>1649315033300</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649315033300</updated>
+    </task>
+    <task id="LOCAL-00014" summary="12th, &#10;A lot of UI added, still need clean up">
+      <created>1649315768743</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1649315768743</updated>
+    </task>
+    <task id="LOCAL-00015" summary="13th,&#10;Added UI function, inputUI works and error appears now. Alphabet panel at the bottom,">
+      <created>1649397327049</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1649397327049</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit. Current have words file, and word picker" />
+    <MESSAGE value="Enter input now works (Checks for correct word).&#10;inputHandler runs in main" />
+    <MESSAGE value="Third commit. Count tries, welcome title" />
+    <MESSAGE value="Forth commit, all logic compete and work on system print" />
+    <MESSAGE value="5th,&#10;System print clean up.&#10;Turns out there is still other features to add&#10;TODO: &#10;1. Max 5 words input&#10;2. Input is a real word" />
+    <MESSAGE value="6th,&#10;Java docs for all completed classes." />
+    <MESSAGE value="7th,&#10;There was error in logic,&#10;all fix now" />
+    <MESSAGE value="Branches fix" />
+    <MESSAGE value="8th,&#10;Words can only be 5 words now" />
+    <MESSAGE value="9th,&#10;Words can only be 5 words now (Fix again)" />
+    <MESSAGE value="10th,&#10;Recieved word can only be a real word now" />
+    <MESSAGE value="11th,&#10;Added Ui, UI need a lot of clean up soon" />
+    <MESSAGE value="12th, &#10;A lot of UI added, still need clean up" />
+    <MESSAGE value="13th,&#10;Added UI function, inputUI works and error appears now. Alphabet panel at the bottom," />
+    <option name="LAST_COMMIT_MESSAGE" value="13th,&#10;Added UI function, inputUI works and error appears now. Alphabet panel at the bottom," />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
