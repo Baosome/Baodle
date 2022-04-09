@@ -79,7 +79,7 @@ public class inputHandler {
             System.out.println("You got it in " + (6 - myTotalTries) + " tries");
             myCompleted = true;
         } else { // else run game logic
-            hasLettersOrLocations(receivedWord);
+//            hasLettersOrLocations(receivedWord);
             System.out.println("You have " + myTotalTries + " total tries left!");
         }
     }
@@ -90,7 +90,7 @@ public class inputHandler {
      *  and prints if true.
      * @param receivedWord Require the received word, user input
      */
-    private void hasLettersOrLocations(String receivedWord){
+    private void hasLettersOrLocations(String receivedWord, JPanel[] myDisplay){
         char[] baodleArr = myBaodle.toCharArray();
         char[] recieChars = receivedWord.toCharArray();
         System.out.println("___________________________\n");
@@ -99,9 +99,11 @@ public class inputHandler {
             for (int j = 0; j < baodleArr.length; j++) {
                 if(i == j && recieChars[i] == baodleArr[j]) { //Correct location
                     System.out.print(GREEN_BACKGROUND + recieChars[i] + ANSI_RESET);
+//                    displayOnLetterDisplay();
                     break;
                 } else if (recieChars[i] == baodleArr[j]) { // Correct letter
                     System.out.print(YELLOW_BACKGROUND + recieChars[i] +ANSI_RESET);
+//                    displayOnLetterDisplay();
                     break;
                 } else if (j == 4){
                     System.out.print(recieChars[i]);
@@ -109,6 +111,10 @@ public class inputHandler {
             }
         }
         System.out.println("\n");
+    }
+
+    private void displayOnLetterDisplay(JPanel[] myDisplay){
+
     }
 
     private boolean realWord(String receviedWords) throws FileNotFoundException {

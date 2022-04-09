@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 
 public class Display extends JFrame{
@@ -73,6 +72,9 @@ public class Display extends JFrame{
         initComponents();
     }
 
+    /**
+     * Initialize DisplayPanels and its components
+     */
     private void initLetterDisplayPanel(){
         LetterDisplayPanel = new JPanel();
         W1L1 = new JLabel();
@@ -80,241 +82,61 @@ public class Display extends JFrame{
         W1L3 = new JLabel();
         W1L4 = new JLabel();
         W1L5 = new JLabel();
+
+        JLabel[] W1 = {W1L1, W1L2, W1L3, W1L4,W1L5};
+
         W2L1 = new JLabel();
         W2L2 = new JLabel();
         W2L3 = new JLabel();
         W2L4 = new JLabel();
         W2L5 = new JLabel();
+
+        JLabel[] W2 = {W2L1, W2L2, W2L3, W2L4,W2L5};
+
         W3L1 = new JLabel();
         W3L2 = new JLabel();
         W3L3 = new JLabel();
         W3L4 = new JLabel();
         W3L5 = new JLabel();
+
+        JLabel[] W3 = {W3L1, W3L2, W3L3, W3L4,W3L5};
+
         W4L1 = new JLabel();
         W4L2 = new JLabel();
         W4L3 = new JLabel();
         W4L4 = new JLabel();
         W4L5 = new JLabel();
+
+        JLabel[] W4 = {W4L1, W4L2, W4L3, W4L4,W4L5};
+
         W5L1 = new JLabel();
         W5L2 = new JLabel();
         W5L3 = new JLabel();
         W5L4 = new JLabel();
         W5L5 = new JLabel();
+
+        JLabel[] W5 = {W5L1, W5L2, W5L3, W5L4,W5L5};
+
         W6L1 = new JLabel();
         W6L2 = new JLabel();
         W6L3 = new JLabel();
         W6L4 = new JLabel();
         W6L5 = new JLabel();
 
-        W1L1.setBackground(new Color(102, 102, 102));
-        W1L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W1L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W1L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W1L1.setOpaque(true);
-        LetterDisplayPanel.add(W1L1);
+        JLabel[] W6 = {W6L1, W6L2, W6L3, W6L4,W6L5};
 
-        W1L2.setBackground(new Color(102, 102, 102));
-        W1L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W1L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W1L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W1L2.setOpaque(true);
-        LetterDisplayPanel.add(W1L2);
+        JLabel[][] LetterDisplayLabels = {W1,W2,W3,W4,W5,W6};
 
-        W1L3.setBackground(new Color(102, 102, 102));
-        W1L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W1L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W1L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W1L3.setOpaque(true);
-        LetterDisplayPanel.add(W1L3);
-
-        W1L4.setBackground(new Color(102, 102, 102));
-        W1L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W1L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W1L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W1L4.setOpaque(true);
-        LetterDisplayPanel.add(W1L4);
-
-        W1L5.setBackground(new Color(102, 102, 102));
-        W1L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W1L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W1L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W1L5.setOpaque(true);
-        LetterDisplayPanel.add(W1L5);
-
-        W2L1.setBackground(new Color(102, 102, 102));
-        W2L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W2L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W2L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W2L1.setOpaque(true);
-        LetterDisplayPanel.add(W2L1);
-
-        W2L2.setBackground(new Color(102, 102, 102));
-        W2L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W2L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W2L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W2L2.setOpaque(true);
-        LetterDisplayPanel.add(W2L2);
-
-        W2L3.setBackground(new Color(102, 102, 102));
-        W2L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W2L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W2L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W2L3.setOpaque(true);
-        LetterDisplayPanel.add(W2L3);
-
-        W2L4.setBackground(new Color(102, 102, 102));
-        W2L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W2L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W2L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W2L4.setOpaque(true);
-        LetterDisplayPanel.add(W2L4);
-
-        W2L5.setBackground(new Color(102, 102, 102));
-        W2L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W2L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W2L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W2L5.setOpaque(true);
-        LetterDisplayPanel.add(W2L5);
-
-        W3L1.setBackground(new Color(102, 102, 102));
-        W3L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W3L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W3L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W3L1.setOpaque(true);
-        LetterDisplayPanel.add(W3L1);
-
-        W3L2.setBackground(new Color(102, 102, 102));
-        W3L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W3L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W3L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W3L2.setOpaque(true);
-        LetterDisplayPanel.add(W3L2);
-
-        W3L3.setBackground(new Color(102, 102, 102));
-        W3L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W3L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W3L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W3L3.setOpaque(true);
-        LetterDisplayPanel.add(W3L3);
-
-        W3L4.setBackground(new Color(102, 102, 102));
-        W3L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W3L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W3L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W3L4.setOpaque(true);
-        LetterDisplayPanel.add(W3L4);
-
-        W3L5.setBackground(new Color(102, 102, 102));
-        W3L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W3L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W3L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W3L5.setOpaque(true);
-        LetterDisplayPanel.add(W3L5);
-
-        W4L1.setBackground(new Color(102, 102, 102));
-        W4L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W4L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W4L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W4L1.setOpaque(true);
-        LetterDisplayPanel.add(W4L1);
-
-        W4L2.setBackground(new Color(102, 102, 102));
-        W4L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W4L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W4L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W4L2.setOpaque(true);
-        LetterDisplayPanel.add(W4L2);
-
-        W4L3.setBackground(new Color(102, 102, 102));
-        W4L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W4L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W4L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W4L3.setOpaque(true);
-        LetterDisplayPanel.add(W4L3);
-
-        W4L4.setBackground(new Color(102, 102, 102));
-        W4L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W4L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W4L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W4L4.setOpaque(true);
-        LetterDisplayPanel.add(W4L4);
-
-        W4L5.setBackground(new Color(102, 102, 102));
-        W4L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W4L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W4L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W4L5.setOpaque(true);
-        LetterDisplayPanel.add(W4L5);
-
-        W5L1.setBackground(new Color(102, 102, 102));
-        W5L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W5L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W5L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W5L1.setOpaque(true);
-        LetterDisplayPanel.add(W5L1);
-
-        W5L2.setBackground(new Color(102, 102, 102));
-        W5L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W5L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W5L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W5L2.setOpaque(true);
-        LetterDisplayPanel.add(W5L2);
-
-        W5L3.setBackground(new Color(102, 102, 102));
-        W5L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W5L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W5L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W5L3.setOpaque(true);
-        LetterDisplayPanel.add(W5L3);
-
-        W5L4.setBackground(new Color(102, 102, 102));
-        W5L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W5L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W5L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W5L4.setOpaque(true);
-        LetterDisplayPanel.add(W5L4);
-
-        W5L5.setBackground(new Color(102, 102, 102));
-        W5L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W5L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W5L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W5L5.setOpaque(true);
-        LetterDisplayPanel.add(W5L5);
-
-        W6L1.setBackground(new Color(102, 102, 102));
-        W6L1.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W6L1.setHorizontalAlignment(SwingConstants.CENTER);
-        W6L1.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W6L1.setOpaque(true);
-        LetterDisplayPanel.add(W6L1);
-
-        W6L2.setBackground(new Color(102, 102, 102));
-        W6L2.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W6L2.setHorizontalAlignment(SwingConstants.CENTER);
-        W6L2.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W6L2.setOpaque(true);
-        LetterDisplayPanel.add(W6L2);
-
-        W6L3.setBackground(new Color(102, 102, 102));
-        W6L3.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W6L3.setHorizontalAlignment(SwingConstants.CENTER);
-        W6L3.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W6L3.setOpaque(true);
-        LetterDisplayPanel.add(W6L3);
-
-        W6L4.setBackground(new Color(102, 102, 102));
-        W6L4.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W6L4.setHorizontalAlignment(SwingConstants.CENTER);
-        W6L4.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W6L4.setOpaque(true);
-        LetterDisplayPanel.add(W6L4);
-
-        W6L5.setBackground(new Color(102, 102, 102));
-        W6L5.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
-        W6L5.setHorizontalAlignment(SwingConstants.CENTER);
-        W6L5.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
-        W6L5.setOpaque(true);
-        LetterDisplayPanel.add(W6L5);
+        for(JLabel[] a : LetterDisplayLabels) {
+            for (JLabel b: a) {
+                b.setBackground(new Color(102, 102, 102));
+                b.setFont(new Font("Nirmala UI", 1, 36)); // NOI18N
+                b.setHorizontalAlignment(SwingConstants.CENTER);
+                b.setBorder(new javax.swing.border.LineBorder(new Color(102, 102, 102), 3, true));
+                b.setOpaque(true);
+                LetterDisplayPanel.add(b);
+            }
+        }
 
         LetterDisplayPanel.setBackground(new Color(153, 153, 153));
         LetterDisplayPanel.setMinimumSize(new Dimension(185, 150));
@@ -324,6 +146,9 @@ public class Display extends JFrame{
         getContentPane().add(LetterDisplayPanel, BorderLayout.CENTER);
     }
 
+    /**
+     * Initialize the alphabets panels and its components.
+     */
     private void initLetterHolder(){
         LetterHolder = new JPanel();
         L1 = new JLabel();
@@ -630,7 +455,6 @@ public class Display extends JFrame{
     }
 
     private void InputActionPerformed(ActionEvent evt, inputHandler theInput) throws FileNotFoundException {
-        System.out.println("printing out what was typed: " + Input.getText());
         theInput.enterInput(Input.getText());
 
     }

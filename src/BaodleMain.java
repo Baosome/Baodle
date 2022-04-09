@@ -6,13 +6,14 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 /**
  * Main called
  */
 public class BaodleMain {
     public static void main(String[] theArgs) {
 //        createWorldeFile();
-
+        System.out.println("Test");
         java.awt.EventQueue.invokeLater(() -> {
             try {
                 new Display().setVisible(true);
