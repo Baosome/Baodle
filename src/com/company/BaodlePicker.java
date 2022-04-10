@@ -1,7 +1,8 @@
 package com.company;
 
-import java.io.File;
-import java.io.RandomAccessFile;
+import java.io.InputStream;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * Picker class.
@@ -11,7 +12,7 @@ public class BaodlePicker {
     /**
      * The list of words file, WordleWords
      */
-    private final File myBaodleTextFile = new File("src/com/company/WordleWords");
+    private InputStream myBaodleTextFile = getClass().getResourceAsStream("/WordleWords");
 
     /**
      * The picked word
@@ -20,9 +21,8 @@ public class BaodlePicker {
 
     /**
      * Constructor
-     * @throws Exception if no file is found
      */
-    public BaodlePicker() throws Exception {
+    public BaodlePicker() {
         pickAWord();
     }
 
@@ -37,15 +37,29 @@ public class BaodlePicker {
     /**
      * Pick a word function,
      * Choose a random word from the word list.
-     * @throws Exception if no file is found
      */
-    private void pickAWord() throws Exception {
-        final RandomAccessFile f = new RandomAccessFile(myBaodleTextFile, "r");
-        final long randomLocation = (long) (Math.random() * f.length());
-        f.seek(randomLocation);
-        f.readLine();
-        myBaodle = f.readLine();
-        f.close();
+    private void pickAWord() {
+
+//        final RandomAccessFile f = new RandomAccessFile(String.valueOf(myBaodleTextFile) , "r");
+//        final long randomLocation = (long) (Math.random() * f.length());
+//        f.seek(randomLocation);
+//        f.readLine();
+//        myBaodle = f.readLine();
+//        f.close();
+
+        Scanner scan = new Scanner(myBaodleTextFile);
+        Random r = new Random();
+        int low = 1;
+        int high = 3088;
+        int result = r.nextInt(high-low);
+
+        int count = 0;
+        while (count != result) {
+            scan.nextLine();
+            count++;
+        }
+        myBaodle = scan.nextLine();
+        scan.close();
     }
 
 }

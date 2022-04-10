@@ -2,8 +2,8 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
+
+import java.io.InputStream;
 import java.util.*;
 
 /**
@@ -26,10 +26,6 @@ public class inputHandler {
      */
     boolean myCompleted = false;
 
-    /**
-     * The list of words file, WordleWords
-     */
-    private final File myBaodleTextFile = new File("src/com/company/WordleWords");
 
     /**
      * Const for change word background in System Print
@@ -52,7 +48,7 @@ public class inputHandler {
      * Function for receiving inputs and counts the
      *  number of tries.
      */
-    public void enterInput(String input, JLabel[] myDisplay, JLabel[] theLetters) throws FileNotFoundException {
+    public void enterInput(String input, JLabel[] myDisplay, JLabel[] theLetters) {
         if(myTotalTries >= 0 && !myCompleted) {
             if (input.length() == 5 && realWord(input.toLowerCase())) {
                 checkWord(input.toLowerCase(), myDisplay, theLetters);
@@ -140,13 +136,17 @@ public class inputHandler {
         }
     }
 
-    private boolean realWord(String receivedWords) throws FileNotFoundException {
+    private boolean realWord(String receivedWords) {
+        final InputStream myBaodleTextFile = getClass().getResourceAsStream("/WordleWords");
+        assert myBaodleTextFile != null;
         Scanner scan = new Scanner(myBaodleTextFile);
         while (scan.hasNext()) {
             if (scan.nextLine().equals(receivedWords)) {
+                scan.close();
                 return true;
             }
         }
+        scan.close();
         return false;
     }
 
