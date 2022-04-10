@@ -1,3 +1,5 @@
+package com.company;
+
 import java.io.File;
 import java.io.RandomAccessFile;
 
@@ -9,7 +11,7 @@ public class BaodlePicker {
     /**
      * The list of words file, WordleWords
      */
-    private final File myBaodleTextFile = new File("WordleWords");
+    private final File myBaodleTextFile = new File("src/com/company/WordleWords");
 
     /**
      * The picked word

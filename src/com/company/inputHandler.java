@@ -1,3 +1,5 @@
+package com.company;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -27,11 +29,11 @@ public class inputHandler {
     /**
      * The list of words file, WordleWords
      */
-    private final File myBaodleTextFile = new File("WordleWords");
+    private final File myBaodleTextFile = new File("src/com/company/WordleWords");
 
     /**
      * Const for change word background in System Print
-     * No future usage after Display class finish.
+     * No future usage after BaodlePackage.Display class finish.
      */
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String GREEN_BACKGROUND = "\u001B[42m";

@@ -1,3 +1,5 @@
+package com.company;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
@@ -158,6 +160,7 @@ public class Display extends JFrame{
         setName("MainFrame"); // NOI18N
         setPreferredSize(new Dimension(500, 750));
         setSize(new Dimension(500, 750));
+        setLocationRelativeTo(null);
 
         titlePanel.setBackground(new Color(153, 153, 153));
 
