@@ -158,6 +158,7 @@ public class Display extends JFrame{
         setName("MainFrame"); // NOI18N
         setPreferredSize(new Dimension(500, 750));
         setSize(new Dimension(500, 750));
+        setLocationRelativeTo(null);
 
         titlePanel.setBackground(new Color(153, 153, 153));
 
@@ -167,6 +168,7 @@ public class Display extends JFrame{
         titleLabel.setText("BAODLE");
         titleLabel.setBorder(new javax.swing.border.LineBorder(new Color(204, 255, 102), 3, true));
         titlePanel.add(titleLabel);
+
 
         getContentPane().add(titlePanel, BorderLayout.PAGE_START);
 
