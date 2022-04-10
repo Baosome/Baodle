@@ -13,7 +13,7 @@ public class Display extends JFrame{
 
     JLabel[] LetterHolderLabels;
 
-    public Display() throws Exception {
+    public Display() {
         initComponents();
     }
 
@@ -144,7 +144,7 @@ public class Display extends JFrame{
 
     }
 
-    private void initComponents() throws Exception {
+    private void initComponents() {
 
         initLetterDisplayPanel();
 
@@ -208,7 +208,7 @@ public class Display extends JFrame{
 
     private void InputActionPerformed(inputHandler theInput, JLabel[][] myDisplay, JLabel[] theLetters) throws FileNotFoundException {
         theInput.enterInput(Input.getText(), myDisplay[5-theInput.myTotalTries], theLetters);
-
+        Input.setText(null);
     }
 
 }

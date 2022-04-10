@@ -62,7 +62,7 @@ public class inputHandler {
         if(myTotalTries < 0) {
             System.out.println("You have used up all 6 tries.");
             JFrame f = new JFrame();
-            JOptionPane.showMessageDialog(f, "You have used up all 6 tries.", "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(f, "You have used up all 6 tries. \nThe Correct Word was: " + myBaodle, "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
@@ -123,15 +123,15 @@ public class inputHandler {
     private void displayOnLetterDisplay(JLabel theDisplay, JLabel[] theLetters, String theColor, String theLetter){
         if (theColor.equals("Green")) {
             theDisplay.setBackground(new Color(3, 255, 33));
-            theDisplay.setText(theLetter);
+            theDisplay.setText(theLetter.toUpperCase());
             theLetters[theLetter.charAt(0)-97].setBackground(new Color(3, 255, 33));
         } else if (theColor.equals("Yellow")) {
             theDisplay.setBackground(new Color(241, 210, 8));
-            theDisplay.setText(theLetter);
+            theDisplay.setText(theLetter.toUpperCase());
             theLetters[theLetter.charAt(0)-97].setBackground(new Color(241, 210, 8));
         } else {
             theDisplay.setBackground(new Color(76, 76, 76));
-            theDisplay.setText(theLetter);
+            theDisplay.setText(theLetter.toUpperCase());
             theLetters[theLetter.charAt(0)-97].setBackground(new Color(76, 76, 76));
         }
     }
