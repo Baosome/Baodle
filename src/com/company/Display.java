@@ -228,7 +228,6 @@ public class Display extends JFrame{
                 theInput.pressedInput(Input.getText(), myDisplay[5-theInput.myTotalTries]);
                 System.out.println("My Current key pressed " +  Input.getText());
             }
-
         }
     }
 
