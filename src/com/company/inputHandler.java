@@ -48,7 +48,7 @@ public class inputHandler {
      * Function for receiving inputs and counts the
      *  number of tries.
      */
-    public void enterInput(String input, JLabel[] myDisplay, JLabel[] theLetters) {
+    public void submitInput(String input, JLabel[] myDisplay, JLabel[] theLetters) {
         if(myTotalTries >= 0 && !myCompleted) {
             if (input.length() == 5 && realWord(input.toLowerCase())) {
                 checkWord(input.toLowerCase(), myDisplay, theLetters);
@@ -63,6 +63,13 @@ public class inputHandler {
             System.out.println("You have used up all 6 tries.");
             JFrame f = new JFrame();
             JOptionPane.showMessageDialog(f, "You have used up all 6 tries. \nThe Correct Word was: " + myBaodle, "GAME OVER", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+
+    public void pressedInput(String input, JLabel[] myDisplay){
+        char[] inputArray = input.toCharArray();
+        for(int i = 0; i < input.length(); i ++) {
+            myDisplay[i].setText(String.valueOf(inputArray[i]));
         }
     }
 

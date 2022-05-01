@@ -2,6 +2,7 @@ package com.company;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.FileNotFoundException;
 
 public class Display extends JFrame{
@@ -203,12 +204,38 @@ public class Display extends JFrame{
             }
         });
 
+        Input.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt2) {
+                InputKeyReleased(myInput, LetterDisplayLabels);
+            }
+        });
+
         pack();
     }
 
     private void InputActionPerformed(inputHandler theInput, JLabel[][] myDisplay, JLabel[] theLetters) throws FileNotFoundException {
-        theInput.enterInput(Input.getText(), myDisplay[5-theInput.myTotalTries], theLetters);
+        theInput.submitInput(Input.getText(), myDisplay[5-theInput.myTotalTries], theLetters);
         Input.setText(null);
+    }
+
+    private void InputKeyReleased(inputHandler theInput, JLabel[][] myDisplay){
+        if (Input.getText().length() < 6) {
+            if(Input.getText().length() == 0 ) {
+                clearMyDisplayRow(myDisplay[5-theInput.myTotalTries]);
+                Input.setText(null);
+            } else{
+                clearMyDisplayRow(myDisplay[5-theInput.myTotalTries]);
+                theInput.pressedInput(Input.getText(), myDisplay[5-theInput.myTotalTries]);
+                System.out.println("My Current key pressed " +  Input.getText());
+            }
+
+        }
+    }
+
+    private void clearMyDisplayRow(JLabel[] myDisplayRow) {
+        for(JLabel a : myDisplayRow) {
+            a.setText(null);
+        }
     }
 
 }
