@@ -66,6 +66,11 @@ public class inputHandler {
         }
     }
 
+    /**
+     * Update the display row for when key is press
+     * @param input the key stroke that was entered.
+     * @param myDisplay The display where they key are appearing on
+     */
     public void pressedInput(String input, JLabel[] myDisplay){
         char[] inputArray = input.toCharArray();
         for(int i = 0; i < input.length(); i ++) {

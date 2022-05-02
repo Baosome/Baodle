@@ -196,6 +196,7 @@ public class Display extends JFrame{
         System.out.println("The Baodle word is " + myBaodleWord);
         inputHandler myInput = new inputHandler(myBaodleWord);
 
+        //Event Listener for when enter is pressed
         Input.addActionListener(evt -> {
             try {
                 InputActionPerformed(myInput, LetterDisplayLabels, LetterHolderLabels);
@@ -204,6 +205,7 @@ public class Display extends JFrame{
             }
         });
 
+        //Event listener for when a key is pressed
         Input.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt2) {
                 InputKeyReleased(myInput, LetterDisplayLabels);
@@ -213,11 +215,24 @@ public class Display extends JFrame{
         pack();
     }
 
+    /**
+     * Submit the input into the Inputhandler to update this display and run game
+     *  logic
+     * @param theInput InputHandler
+     * @param myDisplay The current display
+     * @param theLetters The letter that gets gray out when they are wrong
+     * @throws FileNotFoundException For when no file is found
+     */
     private void InputActionPerformed(inputHandler theInput, JLabel[][] myDisplay, JLabel[] theLetters) throws FileNotFoundException {
         theInput.submitInput(Input.getText(), myDisplay[5-theInput.myTotalTries], theLetters);
         Input.setText(null);
     }
 
+    /**
+     * Display input onto my display in the current roll.
+     * @param theInput The input Handler
+     * @param myDisplay The current display
+     */
     private void InputKeyReleased(inputHandler theInput, JLabel[][] myDisplay){
         if (Input.getText().length() < 6) {
             if(Input.getText().length() == 0 ) {
@@ -231,6 +246,10 @@ public class Display extends JFrame{
         }
     }
 
+    /**
+     * A helper method to clear the JLabel rows
+     * @param myDisplayRow the current myDisplay row.
+     */
     private void clearMyDisplayRow(JLabel[] myDisplayRow) {
         for(JLabel a : myDisplayRow) {
             a.setText(null);
